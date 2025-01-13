@@ -64,13 +64,6 @@ const updateStats = () => {
     const numbers = document.getElementById("numbers");
     if (numbers) numbers.innerText = `${completeTasks}/${totalTasks}`;
 
-    if (tasks.length > 0 && completeTasks === totalTasks) {
-        blastConfetti(); // Вызов конфетти
-        confettiLaunched = true;
-    }
-    if (completeTasks < totalTasks) {
-        confettiLaunched = false;
-    }
 };
 
 // Переключение статуса выполнения задачи
@@ -99,8 +92,8 @@ const updateTasksList = () => {
                 <p>${task.text}</p>
             </div>
             <div class="icons">
-                <img src="edit.png" alt="Edit" onClick="editTask(${index})">
-                <img src="bin.png" alt="Delete" onClick="deleteTask(${index})">
+                <img src="image/edit.png" alt="Edit" onClick="editTask(${index})">
+                <img src="image/bin.png" alt="Delete" onClick="deleteTask(${index})">
             </div>
         `;
 
